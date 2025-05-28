@@ -1,0 +1,3 @@
+students#nombre#str#id#int#dpto#str
+teachers#nombre#str#id#int#dpto#str
+titanic#PassengerId#int#Survived#int#Pclass#int#Name#str#Sex#str#Age#int#SibSp#int#Parch#int#Ticket#str#Fare#float#Cabin#str#Embarked#char
