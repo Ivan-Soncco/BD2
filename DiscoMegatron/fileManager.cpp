@@ -43,7 +43,6 @@ void FileManager::añadirFileAFileManager(File* file_){
     escribirCampoBinario(fd, file_->getNombre(), "char", 50);  
     int actualizarTamaño=file_->getTamFile()+50;
     
-
     int bloque = file_->getBloque();
     escribirCampoBinario(fd, &bloque, "int", 4);
     actualizarTamaño+=4;
@@ -54,9 +53,10 @@ void FileManager::añadirFileAFileManager(File* file_){
     actualizarTamaño+=4;
     
 
-    int tam = file_->getTamFile();
+    
     actualizarTamaño+=4;
-    file_->setTamFile(actualizarTamaño); 
+    file_->setTamFile(actualizarTamaño);
+    int tam = file_->getTamFile();
     escribirCampoBinario(fd, &tam, "int", 5);
 
     close(fd);
