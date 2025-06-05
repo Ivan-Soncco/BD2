@@ -1,36 +1,26 @@
 #ifndef DISCO_H
 #define DISCO_H
-#include "fileManager.h"
 
-class Disco{
-  private:
+#include <vector>
+#include "plato.h"
+#include "platoManager.h"
+#include "pistaManager.h"
+#include "sectorManager.h"
+#include <dirent.h>
+
+class Disco {
+private:
     char nombreDisco[50];
-    int nSectoresXPista, nSectoresXBloque, nPistas, nPlatos;
-    int tSector, tTotal;
+    int nPlatosXDisco;
+    std::vector<Plato> platos;
 
-    FileManager fileManager;
-
-    void crearEstructuraDisco();
-    void crearPlato(int index);
-    void crearPista(const char* tipoPista, int indexPista);
-    void crearSector(const char* nombreSector);
-
-    void irACarpeta(const char* nombre);
-    void volverACarpeta(const char* pathAnterior);
-    const char* getNombreDisco() const;
-
-    void guardarMetadata();
-    Disco leerMetadata(const char* nombreDiscoInput);
-  public:
-    Disco(const char* nombre, int tSector_, int nSectoresXP_, int nPistas_, int nPlatos_);
-    ~Disco(){}
-    static Disco crearDinamicamente();
-    FileManager& getFileManager();
-
-    void configurarFileManager();
-    void guardarFile();
-    void insertar();
-    void borrar();
+public:
+    Disco(const char* nombre);
+    void guardarInformacionDisco(const char* nombreDisco, int nPlatos, int nPistas, int nSectores, int tamSector);
+    bool discoExiste(const char* nombreDisco);
+    void leerInfoDeDiscoYActualizar(const char* nombreDisco, int& nPlatos, int& nPistas, int& nSectores, int& tamSector);
+    void mostrarInformacion();
+    void mostrarArbol();
 };
 
 #endif

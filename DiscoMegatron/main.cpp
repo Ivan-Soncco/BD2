@@ -14,25 +14,33 @@ int main(){
         cout << "2. Usar un disco ya creado\n";
         cout << "3. Añadir un File\n";
         cout << "4. Insertar un registro\n";
+        cout << "5. Mostrar información del disco\n";
         cout << "0. Salir\n";
         cout << "Seleccione una opción: ";
 
         int opcion;
         cin >> opcion;
 
-
         switch (opcion) {
-            case 1:
+            case 1: {
                 delete discoActual;  // borrar disco anterior si lo hubiera
-                discoActual = new Disco(Disco::crearDinamicamente());
+
+                char nombreDisco[50];
+                cout << "Ingrese el nombre del nuevo disco: ";
+                cin >> nombreDisco;
+
+                // Crea disco con nombre y pide datos por consola (usando el constructor que ya tienes)
+                discoActual = new Disco(nombreDisco);
+
                 cout << "Disco creado correctamente.\n";
                 break;
+            }
 
             case 2: {
                 char nombreDisco[50];
                 cout << "Ingrese el nombre del disco existente: ";
                 cin >> nombreDisco;
-
+                /*
                 char nombre[50];
                 int tSector;
                 int nSectoresP;
@@ -40,21 +48,29 @@ int main(){
                 int nPistas;
                 int nPlatos;
                 logicaCargarDatosDesdeMetadata(nombreDisco, nombre, &tSector, &nSectoresP, &nSectoresB, &nPistas, &nPlatos);
+                */
                 delete discoActual;
-                discoActual = new Disco(nombre, tSector, nSectoresP, nPistas, nPlatos);
-                cout << "Se usará el disco '" << nombre << "' con parámetros por defecto.\n";
+                discoActual = new Disco(nombreDisco);
+                //cout << "Se usará el disco '" << nombre << "' con parámetros por defecto.\n";
                 break;
             }
 
-            case 3:
+            case 3: {
                 char nombreFile[50];
                 cout << "Ingrese el nombre del File que quiere insertar: ";
                 cin >> nombreFile;
-                
                 break;
+            }
 
             case 4:
-                
+                break;
+
+            case 5:
+                if (discoActual != nullptr) {
+                    discoActual->mostrarInformacion();
+                } else {
+                    std::cout << "Primero debe crear o seleccionar un disco.\n";
+                }
                 break;
 
             case 0:
