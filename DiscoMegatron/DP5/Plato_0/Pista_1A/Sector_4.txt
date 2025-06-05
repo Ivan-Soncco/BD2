@@ -1,0 +1,10 @@
+o,yes,1,no,unfurnished
+4480000,4000,3,1,2,yes,no,no,no,no,2,no,furnished
+4480000,8250,3,1,1,yes,no,no,no,no,0,no,furnished
+4480000,4040,3,1,2,yes,no,no,no,no,1,no,semi-furnished
+4473000,6360,2,1,1,yes,no,yes,no,yes,1,no,furnished
+4473000,3162,3,1,2,yes,no,no,no,yes,1,no,furnished
+4473000,3510,3,1,2,yes,no,no,no,no,0,no,semi-furnished
+4445000,3750,2,1,1,yes,yes,yes,no,no,0,no,semi-furnished
+4410000,3968,3,1,2,no,no,no,no,no,0,no,semi-furnished
+4410000,4900,2,1,2,yes,no,yes,no,no,0,no,semi-furnished

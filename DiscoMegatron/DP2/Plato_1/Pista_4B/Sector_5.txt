@@ -1,0 +1,11 @@
+emi-furnished
+3080000,3090,2,1,1,yes,yes,yes,no,no,0,no,unfurnished
+3080000,4500,2,1,2,yes,no,no,yes,no,1,no,semi-furnished
+3045000,3800,2,1,1,yes,no,no,no,no,0,no,unfurnished
+3010000,3090,3,1,2,no,no,no,no,no,0,no,semi-furnished
+3010000,3240,3,1,2,yes,no,no,no,no,2,no,semi-furnished
+3010000,2835,2,1,1,yes,no,no,no,no,0,no,semi-furnished
+3010000,4600,2,1,1,yes,no,no,no,no,0,no,furnished
+3010000,5076,3,1,1,no,no,no,no,no,0,no,unfurnished
+3010000,3750,3,1,2,yes,no,no,no,no,0,no,unfurnished
+3010000,3

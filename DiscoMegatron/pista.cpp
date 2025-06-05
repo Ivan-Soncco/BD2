@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <cstdio>
+#include <iostream>
 
 #include "sector.h"
 
@@ -13,14 +14,19 @@ Pista::Pista(const char* nombre_, int nSectores, int tamSector): nSectoresXPista
 
     //Se crea la carpeta con el nombre de la pista
     if (mkdir(nombre, 0755) != 0) {
-        perror("mkdir() error en pista");
-        return;
+        if (errno != EEXIST) {
+            perror("mkdir() error en Pista");
+            return;
+        } else {
+            std::cerr << "Aviso: la carpeta \"" << nombre << "\" ya existe. Se reutilizará.\n";
+        }
     }
     //Se accede a la carpeta con el nombre de la pista
     if (chdir(nombre) != 0) {
         perror("chdir() error");
         return;
     }
+    std::cout << "  * " << nombre << std::endl;
     for(int i = 0; i<nSectoresXPista; i++ ){
         //Se genera el nombre para el sector
         char nombreSector[40];

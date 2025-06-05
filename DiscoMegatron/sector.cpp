@@ -4,12 +4,20 @@
 #include <fcntl.h>   // open
 #include <unistd.h>  // write, close, lseek
 #include <sys/stat.h> // permisos
+#include <iostream>
 
 Sector::Sector(const char* nombre_, int tamanoSector) : tamano(tamanoSector) {
     strncpy(nombre, nombre_, sizeof(nombre));
     nombre[sizeof(nombre) - 1] = '\0';
-    //Crea un archivo.txt con el nombre propio del sector, y el tamaño del sector enviado.
-    // Crea un archivo .txt con el nombre del sector y el tamaño especificado
+
+    // Verificar si el archivo ya existe
+    struct stat st;
+    if (stat(nombre, &st) == 0) {
+        std::cerr << "Aviso: el archivo \"" << nombre << "\" ya existe. No se sobrescribirá.\n";
+        return;
+    }
+    
+    // Creo un archivo .txt 
     int fd = open(nombre, O_WRONLY | O_CREAT, 0644);
     if (fd == -1) {
         perror("open() error en sector");
@@ -32,6 +40,8 @@ Sector::Sector(const char* nombre_, int tamanoSector) : tamano(tamanoSector) {
 
     // Cierra el archivo
     close(fd);
+
+    std::cout << "    * " << nombre << std::endl;
 }
 
 const char* Sector::getNombre() const {

@@ -1,0 +1,10 @@
+0,4410,2,1,1,no,no,no,no,no,1,no,unfurnished
+4200000,4000,4,2,2,no,no,no,no,no,0,no,semi-furnished
+4200000,2325,3,1,2,no,no,no,no,no,0,no,semi-furnished
+4200000,4600,3,2,2,yes,no,no,no,yes,1,no,semi-furnished
+4200000,3640,3,2,2,yes,no,yes,no,no,0,no,unfurnished
+4200000,5800,3,1,1,yes,no,no,yes,no,2,no,semi-furnished
+4200000,7000,3,1,1,yes,no,no,no,no,3,no,furnished
+4200000,4079,3,1,3,yes,no,no,no,no,0,no,semi-furnished
+4200000,3520,3,1,2,yes,no,no,no,no,0,yes,semi-furnished
+4200000,2145,3,1,3,yes,n

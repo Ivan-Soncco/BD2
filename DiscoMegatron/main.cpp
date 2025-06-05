@@ -29,7 +29,7 @@ int main(){
                 cout << "Ingrese el nombre del nuevo disco: ";
                 cin >> nombreDisco;
 
-                // Crea disco con nombre y pide datos por consola (usando el constructor que ya tienes)
+                // Creo disco con nombre 
                 discoActual = new Disco(nombreDisco);
 
                 cout << "Disco creado correctamente.\n";
@@ -51,7 +51,7 @@ int main(){
                 */
                 delete discoActual;
                 discoActual = new Disco(nombreDisco);
-                //cout << "Se usará el disco '" << nombre << "' con parámetros por defecto.\n";
+                //cout << "Se usará el disco '" << nombreDisco << "' con parámetros por defecto.\n";
                 break;
             }
 
@@ -59,6 +59,7 @@ int main(){
                 char nombreFile[50];
                 cout << "Ingrese el nombre del File que quiere insertar: ";
                 cin >> nombreFile;
+                discoActual->addFile(nombreFile);
                 break;
             }
 

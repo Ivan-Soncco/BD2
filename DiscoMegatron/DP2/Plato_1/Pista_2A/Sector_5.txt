@@ -1,0 +1,11 @@
+shed
+4025000,3630,3,2,2,yes,no,no,yes,no,2,no,semi-furnished
+4025000,3460,3,2,1,yes,no,yes,no,yes,1,no,furnished
+4025000,5400,3,1,1,yes,no,no,no,no,3,no,semi-furnished
+4007500,4500,3,1,2,no,no,yes,no,yes,0,no,semi-furnished
+4007500,3460,4,1,2,yes,no,no,no,yes,0,no,semi-furnished
+3990000,4100,4,1,1,no,no,yes,no,no,0,no,unfurnished
+3990000,6480,3,1,2,no,no,no,no,yes,1,no,semi-furnished
+3990000,4500,3,2,2,no,no,yes,no,yes,0,no,semi-furnished
+3990000,3960,3,1,2,yes,no,no,no,no,0,no,furnished
+3990000,4
